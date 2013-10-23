@@ -1,0 +1,15 @@
+#include<stdio.h>
+void main()
+{
+	int sayı1,sayı2,gec;
+	printf("1.Sayiyi giriniz:");	
+	scanf("%d",&sayı1);
+	printf("2.Sayiyi giriniz:");
+	scanf("%d",&sayı2);
+	gec=sayı2;
+	sayı2=sayı1;
+	sayı1=gec;
+	printf("1.sayi=%d \n2.sayi=%d\n",sayı1,sayı2);
+
+
+}

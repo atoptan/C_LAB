@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+	char cinsiyet;
+	float kilo,boy,sonuc;
+	printf("\t\tVUCUT KITLE INDEKSİ OGRENME PROGRAMI\n");
+	printf("Cinsiyet Belirtiniz(e/k):");
+	cinsiyet=getchar();
+	printf("\nKilonuzu Giriniz:");
+	scanf("%f",&kilo);
+	printf("\nBoyunuzu Giriniz:");
+	scanf("%f",&boy);
+	
+	sonuc=kilo/(boy*boy);
+	
+	switch(cinsiyet) //cinsiyete göre ayrım
+	{
+	case 'k':
+		printf("\nVucut Kitle Indeksi:%f\n",sonuc);
+		getch();  //sonucu görmek için bir tusa basmalısınız
+		if(sonuc<=19.1)
+			printf("Zayifsiniz!! Sagliginiz Riskli...");
+		else if(sonuc>19.1 && sonuc<=25.8)
+			printf("Normalsiniz!! Risk Yok...");
+		else if(sonuc>25.8 && sonuc<=32.2)
+			printf("Sismanlik sinirinda yada sismansiniz...");
+		else
+			printf("Obezite!!! Ciddi derecede Riskli...");
+		break;
+	case 'e':
+		printf("\nVucut Kitle Indeksi:%f\n",sonuc);
+		getch();
+		if(sonuc<=20.7)
+			printf("Zayifsiniz!! Sagliginiz Riskli...");
+		else if(sonuc>20.7 && sonuc<=26.4)
+			printf("Normalsiniz!! Risk Yok...");
+		else if(sonuc>26.4 && sonuc<=31.1)
+			printf("Sismanlik sinirinda yada sismansiniz...");
+		else
+			printf("Obezite!!! Ciddi derecede Riskli...");
+		break;
+	default:
+		printf("Yanlis bir harf girdiniz!!:");
+		break;
+	}
+
+
+
+	
+
+}

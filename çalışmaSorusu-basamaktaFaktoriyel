@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+	int sayi[3],sayi1,i=0,toplam=0,faktoriyel=1;
+	printf("Sayiyi giriniz:");
+	scanf("%d",&sayi1);
+	
+	while(sayi1!=0)
+	{
+		sayi[i]=sayi1%10;
+		sayi1=sayi1/10;
+		i++;
+	}
+	for (int j = 0; j < 3; j++)
+	{
+		faktoriyel=1;
+		for (int k = 1; k <= sayi[j]; k++)
+		{
+			faktoriyel=faktoriyel*k;
+		}
+		toplam=toplam+faktoriyel;
+	}
+	printf("\nSonuc:%d\n",toplam);
+	
+}

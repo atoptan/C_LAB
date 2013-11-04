@@ -1,0 +1,33 @@
+#include<stdio.h>
+void main()
+{
+  int sayidizi[3],sayi,gec,i=0;
+	printf("bir sayi giriniz:");
+	scanf("%d",&sayi);
+	printf("\n");
+	while(sayi!=0)
+	{
+		sayidizi[i]=sayi%10;
+		sayi=sayi/10;
+		i++;
+	}
+	for (int j = 0; j < 3; j++)
+	{
+		for (int k = j+1; k < 4; k++)
+		{
+			if(sayidizi[k]>sayidizi[j])
+			{
+				gec=sayidizi[j];
+				sayidizi[j]=sayidizi[k];
+				sayidizi[k]=gec;
+			}
+		}
+	}
+	printf("Olusan 3 basamakli en buyuk sayi:");
+	for (int j = 0; j < 3; j++)
+	{
+		printf("%d",sayidizi[j]);
+	}
+	printf("\n");
+
+}

@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+int sayidizi[3],sayi,max,i=0,j;
+	printf("Sayiyi giriniz:");
+	scanf("%d",&sayi);
+	while(sayi!=0)
+	{
+		sayidizi[i]=sayi%10;
+		sayi=sayi/10;
+		i++;
+	}
+	max=sayidizi[0];
+	for ( j = 0; j < 3; j++)
+	{
+		if(sayidizi[j]>max)
+			max=sayidizi[j];
+	}
+	if (max==sayidizi[0])
+		printf("en buyuk rakam sagdan 1.sirada...");
+	else if (max==sayidizi[1])
+		printf("en buyuk rakam sagdan 2.sirada...");
+	else 
+		printf("en buyuk rakam sagdan 3.sirada...");
+}

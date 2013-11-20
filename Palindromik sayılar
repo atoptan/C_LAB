@@ -1,0 +1,24 @@
+void palindromik(int sayi)
+{
+	int basamak[30],i=0,bulundu=0;
+	int gecicisayi;
+	gecicisayi=sayi;
+	while(sayi!=0)
+	{
+		basamak[i]=sayi%10;
+		sayi=sayi/10;
+		i++;
+	}
+	for (int j = 0; j<=i/2; j++)
+	{
+		if(basamak[j]!=basamak[i-1-j])
+		{
+			bulundu=1;
+			break;
+		}
+	}
+	if(bulundu==0)
+		printf("%d sayisi palindromiktir...",gecicisayi);
+	else
+		printf("%d sayisi palindromik degildir...",gecicisayi);
+}
